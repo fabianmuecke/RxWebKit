@@ -57,6 +57,21 @@ Add run script build phase `/usr/local/bin/carthage copy-frameworks` with input 
 $(SRCROOT)/carthage/Build/iOS/RxWebKit.framework
 ```
 
+### Swift Package Manager
+
+Create a `Package.swift` file.
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "SampleProject",
+    dependencies: [
+        .Package(url: "https://github.com/RxSwiftCommunity/RxWebKit.git" from: "1.0.0")
+    ]
+)
+```
+
 ## Requirements
 
 RxWebKit requires Swift 5.2.2 and dedicated versions of RxSwift 5.1.1
